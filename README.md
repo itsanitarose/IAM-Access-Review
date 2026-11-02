@@ -91,7 +91,8 @@ As a result, I began to see IAM as more than simply granting or removing access.
 | [IT Manager Summary](./01-Documents/04.%20Summary%20for%20the%20IT%20Manager.md) | Key findings, immediate actions and recommendations |
 | [Lab & Testing](./02-Lab/Entra%20ID/) | Entra ID changes, PowerShell scripts and test evidence |
 
----
+
+<br>
 
 ---
 
