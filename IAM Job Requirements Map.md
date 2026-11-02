@@ -14,7 +14,20 @@ This map links IAM Analist job requirements to work completed in this project.
 | Identify process gaps              | [Preventive Controls](./01-Documents/03.%20Preventive%20Controls.md): Identified weaknesses in offboarding, account ownership and shared access management.                          |
 | Security reporting                 | [IT Manager Summary](./01-Documents/04.%20Summary%20for%20the%20IT%20Manager.md): Communicated findings, priorities and recommendations to management in a written summary.          |
 
+
+<br>
+
+### 🔄 Actively Learning
+
+*Beyond the core job requirements.*
+
+- **PowerShell for IAM:** Analyse identity data, identify orphaned accounts, flag excessive permissions and verify access changes.
+- **Non-Human Identity Management:** Service-account lifecycles, ownership and credential management.
+- **AI Agent Identity Security:** Agent identities, permissions, APIs, tools and connectors.
+- **AI Access Controls:** Delegated authorisation, least privilege and activity monitoring.
+
 ---
 
+[Back to Project Overview](https://github.com/itsanitarose/IAM-AI-Agent-Security-Review)
 [Back to Project Overview](./README.md)
 
