@@ -6,6 +6,8 @@ Northwind Health is a fictional healthcare organisation supporting approximately
 
 It's my first week on the security team, and I've been handed my first ticket.
 
+<sub>* Fictional scenario. Real world analysis.</sub>
+
 ### 📁 The Ticket
 
 **IT Manager's Request:**
