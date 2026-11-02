@@ -28,6 +28,5 @@ This map links IAM Analist job requirements to work completed in this project.
 
 ---
 
-[Back to Project Overview](https://github.com/itsanitarose/IAM-AI-Agent-Security-Review)
 [Back to Project Overview](./README.md)
 
