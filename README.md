@@ -93,4 +93,8 @@ As a result, I began to see IAM as more than simply granting or removing access.
 
 ---
 
-[IAM Skills Map](IAM%20Job%20Requirements%20Map.md) | [IAM Case Studies](https://github.com/itsanitarose) | [GitHub Profile](https://github.com/itsanitarose)
+---
+
+[All Case Studies](https://github.com/itsanitarose/IAM-Case-Studies) · [Week 2: Permission Sprawl & RBAC →](https://github.com/itsanitarose/IAM-Permission-Sprawl-RBAC)
+
+*Northwind Health is fictional. This is a portfolio assessment; no live production systems were changed.*
