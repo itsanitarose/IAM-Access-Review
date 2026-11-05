@@ -6,19 +6,23 @@ It's 5 October 2026, my first day on the security team at Northwind Health, a fi
 
 My first ticket arrives. The IT Manager writes:
 
-> We've never properly reconciled the patient admin portal against HR. Here are both exports.
-> Tell me what's wrong, what to fix first, and how we stop it happening again.
+> We've never properly reconciled the patient admin portal against HR. Here are both exports. **Tell me what's wrong, what to fix first, and how we stop it happening again.**
 
+<br>
 
 Before deciding what needs fixing, I need to understand what the records are telling me.
-<br><br>
+
+<br>
+
+
 
 ## What I'm Working With
 
 I have two lists: the HR records showing who works for the organisation, and an export showing who can access the patient portal. Every account should have a legitimate owner and a reason for its level of access. That includes contractors, whose access may have an expiry date.
 
-I'm not hunting for “bad accounts.” I'm hunting for **access that no longer makes sense**. An account can look perfectly normal in the export and still have permissions it shouldn't.
-<br><br>
+I'm not hunting for "bad accounts." I'm hunting for **access that no longer makes sense**. An account can look perfectly normal in the export and still have permissions it shouldn't.
+
+<br>
 
 ## How I Worked Through It
 
@@ -26,14 +30,15 @@ I'm not hunting for “bad accounts.” I'm hunting for **access that no longer 
 I started with employment status, contract end dates and recent login activity. If someone has left but their account remains active, that needs investigating. The HR record could be outdated, so I can't automatically assume the access is unauthorised.
 
 **2. Is the access still appropriate?**  
-Finding a matching HR record doesn't mean the permissions are right. I checked access levels, administrative privileges and shared credentials against job responsibilities. I paid particular attention to admin access because the risk if it is misused hits harder.
+Finding a matching HR record doesn't mean the permissions are right. I checked access levels, administrative privileges and shared credentials against job responsibilities, paying particular attention to admin access because the risk if it is misused hits harder.
 
 **3. What needs further investigation?**  
 Some accounts couldn't be assessed from the exports alone. For those, I needed to establish who owned the account, why the access existed and who could confirm whether it was still required. If nobody could explain who was responsible for an account, that was worth recording too.
 
 **4. What needs attention first?**  
 I ranked the findings by risk, considering the privileges involved, the available information and the potential consequences. Not every discrepancy requires the same response.
-<br><br>
+
+<br>
 
 ## What I Found
 
@@ -60,39 +65,38 @@ Almost two months later, the account still had administrative access. I prioriti
 But there's a distinction I don't want to overlook. **The records raise a serious concern, but they don't prove a breach occurred.**
 
 It's possible the contract was extended without HR being updated. That would point to a governance gap that still needs correcting, but it's different from someone accessing the system without authorisation. I need to establish what happened before deciding what action is justified.
-<br><br>
+
+<br>
 
 ## Looking Back at the Review
 
-With the investigation complete, I wanted to look at how I'd approached the ticket. What helped me make a sound decision, and where would I need more information next time?
+With the investigation complete, I looked back at how I'd approached the ticket. What helped me make a sound decision, and where would I need more information next time?
 
-Starting with the HR reconciliation was the right call. It helped me identify discrepancies before deciding what needed attention. Prioritising by risk also made sense, particularly where administrative privileges were involved.
+Starting with the HR reconciliation was the right call. It surfaced discrepancies before I decided what needed attention, and prioritising by risk kept the focus on administrative privileges.
 
-But the exports had their limits. Take `treyes`. The contract end date and later admin login raised a concern, but they couldn't tell me whether an extension had been approved. That required confirmation outside the data I'd been given.
+But the exports had their limits. Take `treyes`: the contract end date and later admin login raised a concern, but they couldn't tell me whether an extension had been approved. That needed confirmation from outside the data I'd been given. Next time I'd want a clearer way to establish account ownership, check approval history and understand why access was originally granted.
 
-I'd want a clearer way to establish account ownership, check approval history and understand why access was originally granted. That would make future reviews more efficient and reduce the risk of acting on incomplete information.
+Acting too quickly has a cost. Disabling access someone still legitimately needs disrupts the business without resolving the actual problem, so every decision has to balance **maintaining security and allowing the business to operate without unnecessary disruption.** The same applies to prevention: finding inappropriate access is one part of the job, and understanding how it remained in place shows which controls need improving.
 
-Acting too quickly could mean disabling access that someone still legitimately needs, disrupting business operations without resolving the actual problem. Every decision needs to account for both: **maintaining security and allowing the business to operate without unnecessary disruption.**
-
-The same thinking applies to prevention. Identifying inappropriate access is one part of the job. Understanding how it remained in place is what helps me decide which controls need improving.
-
-The question I'd carry into the next review is:
+The question I'd carry into the next review:
 
 **Does this access still have a legitimate purpose, and can the organisation account for it?**
-<br><br>
+
+<br>
 
 ## Explore the Investigation
 
 | Document | What's Inside |
 |---|---|
-| [01. Source Data](01-Documents/) | Original HR records and patient portal export |
-| [02. Findings & Recommendations](01-Documents/) | Access discrepancies, risk ratings and proposed actions |
-| [03. Preventive Controls](01-Documents/) | Recommendations to prevent recurring access issues |
-| [04. IT Manager Summary](01-Documents/) | Key findings and recommended priorities |
+| [01. Source Data](01-Documents/01.%20Source%20Data.md) | Original HR records and patient portal export |
+| [02. Findings & Recommendations](01-Documents/02.%20Findings%20%26%20Recommendations.md) | Access discrepancies, risk ratings and proposed actions |
+| [03. Preventive Controls](01-Documents/03.%20Preventive%20Controls.md) | Recommendations to prevent recurring access issues |
+| [04. IT Manager Summary](01-Documents/04.%20Summary%20for%20the%20IT%20Manager.md) | Key findings and recommended priorities |
+
 <br>
 
 ---
 
 [All Case Studies](https://github.com/itsanitarose/IAM-Case-Studies) · [Week 2: Permission Sprawl & RBAC →](https://github.com/itsanitarose/IAM-Permission-Sprawl-RBAC)
 
-*Northwind Health is fictional. This is independent work. No production systems were changed.*
+<sub>Northwind Health is fictional. This is independent work. No production systems were changed.</sub>
