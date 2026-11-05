@@ -95,4 +95,4 @@ The question I'd carry into the next review is:
 
 [All Case Studies](https://github.com/itsanitarose/IAM-Case-Studies) · [Week 2: Permission Sprawl & RBAC →](https://github.com/itsanitarose/IAM-Permission-Sprawl-RBAC)
 
-*Northwind Health is fictional. This is independent work. No production systems were changed.*
+*Northwind Health is fictional. Real world analysis. No production systems were changed.*
