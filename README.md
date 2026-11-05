@@ -2,16 +2,16 @@
 
 ## 🎫 The Ticket
 
-It's my first week on the security team, and my first ticket arrives. The IT Manager writes:
+It's 5 October 2026, my first day on the security team at Northwind Health, a fictional healthcare organisation with about 400 clinics.
 
-> We've never properly reconciled the patient admin portal against HR. Here are both exports. Tell me what's wrong, what to fix first, and how we stop it happening again.
+My first ticket arrives. The IT Manager writes:
 
-*Northwind Health is a fictional healthcare organisation supporting approximately 400 clinics and handling sensitive patient information.*
-<br><br>
+> We've never properly reconciled the patient admin portal against HR. Here are both exports.
+> Tell me what's wrong, what to fix first, and how we stop it happening again.
 
-📅 **Audit date:** 5 October 2026
 
 Before deciding what needs fixing, I need to understand what the records are telling me.
+<br><br>
 
 ## What I'm Working With
 
