@@ -17,15 +17,17 @@ This map links IAM Analist job requirements to work completed in this project.
 
 <br>
 
-### 🔄 Actively Learning
+## 🔄 Actively Learning
 
 *Beyond the core job requirements.*
 
-- **PowerShell for IAM:** Analyse identity data, identify orphaned accounts, flag excessive permissions and verify access changes.
-- **Non-Human Identity Management:** Service-account lifecycles, ownership and credential management.
-- **AI Agent Identity Security:** Agent identities, permissions, APIs, tools and connectors.
-- **AI Access Controls:** Delegated authorisation, least privilege and activity monitoring.
+- **PowerShell & Microsoft Graph for IAM:** Automating identity tasks, querying directory data and managing access.
+- **Non-Human Identity Management:** Service account lifecycles, ownership, credential management and accountability.
+- **AI Agent Identity Security:** Agent identities, permissions, APIs, tools, connectors and delegated access.
 
+---
+
+[Back to Project Overview](https://github.com/itsanitarose/IAM-Case-Studies)
 ---
 
 [Back to Project Overview](./README.md)
