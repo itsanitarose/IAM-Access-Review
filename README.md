@@ -92,6 +92,6 @@ The question I'd carry into the next review is:
 
 ---
 
-[← All Case Studies](https://github.com/itsanitarose/IAM-Case-Studies)
+[All Case Studies](https://github.com/itsanitarose/IAM-Case-Studies) · [Week 2: Permission Sprawl & RBAC →](https://github.com/itsanitarose/IAM-Permission-Sprawl-RBAC)
 
-*Northwind Health is fictional. This is a portfolio assessment; no live production systems were changed.*
+*Northwind Health is fictional. Each case study uses a simulated business scenario; any hands-on work is carried out in a test environment, not on production systems.*
