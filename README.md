@@ -89,9 +89,10 @@ The question I'd carry into the next review is:
 | [02. Findings & Recommendations](01-Documents/) | Access discrepancies, risk ratings and proposed actions |
 | [03. Preventive Controls](01-Documents/) | Recommendations to prevent recurring access issues |
 | [04. IT Manager Summary](01-Documents/) | Key findings and recommended priorities |
+<br>
 
 ---
 
 [All Case Studies](https://github.com/itsanitarose/IAM-Case-Studies) · [Week 2: Permission Sprawl & RBAC →](https://github.com/itsanitarose/IAM-Permission-Sprawl-RBAC)
 
-*Northwind Health is fictional. Each case study uses a simulated business scenario; any hands-on work is carried out in a test environment, not on production systems.*
+*Northwind Health is fictional. No production systems were changed.*
