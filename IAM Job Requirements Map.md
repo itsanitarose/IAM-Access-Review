@@ -27,8 +27,6 @@ This map links IAM Analist job requirements to work completed in this project.
 
 ---
 
-[Back to Project Overview](https://github.com/itsanitarose/IAM-Case-Studies)
----
 
 [Back to Project Overview](./README.md)
 
