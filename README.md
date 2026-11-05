@@ -85,14 +85,16 @@ The question I'd carry into the next review:
 <br>
 
 
+
 ## Explore the Investigation
 
 | Document | What's Inside |
 |---|---|
-| [01. Source Data](./01-Documents/01.%20Source%20Data.md) | Original HR records and patient portal export |
-| [02. Findings & Recommendations](./01-Documents/02.%20Findings%20%26%20Recommendations.md) | Access discrepancies, risk ratings and proposed actions |
-| [03. Preventive Controls](./01-Documents/03.%20Preventive%20Controls.md) | Recommendations to prevent recurring access issues |
-| [04. IT Manager Summary](./01-Documents/04.%20Summary%20for%20the%20IT%20Manager.md) | Key findings and recommended priorities |
+| [01. Source Data](Documents/01.%20Source%20Data.md) | Original HR records and patient portal export |
+| [02. Findings & Recommendations](Documents/02.%20Findings%20%26%20Recommendations.md) | Access discrepancies, risk ratings and proposed actions |
+| [03. Preventive Controls](Documents/03.%20Preventive%20Controls.md) | Recommendations to prevent recurring access issues |
+| [04. IT Manager Summary](Documents/04.%20Summary%20for%20the%20IT%20Manager.md) | Key findings and recommended priorities |
+
 
 
 <br>
