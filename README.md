@@ -7,10 +7,9 @@ It's my first week on the security team, and my first ticket arrives. The IT Man
 > We've never properly reconciled the patient admin portal against HR. Here are both exports. Tell me what's wrong, what to fix first, and how we stop it happening again.
 
 *Northwind Health is a fictional healthcare organisation supporting approximately 400 clinics and handling sensitive patient information.*
+<br><br>
 
-<br>
-
-**Audit date:** 5 October 2026
+📅 **Audit date:** 5 October 2026
 
 Before deciding what needs fixing, I need to understand what the records are telling me.
 
@@ -19,29 +18,22 @@ Before deciding what needs fixing, I need to understand what the records are tel
 I have two lists: the HR records showing who works for the organisation, and an export showing who can access the patient portal. Every account should have a legitimate owner and a reason for its level of access. That includes contractors, whose access may have an expiry date.
 
 I'm not hunting for “bad accounts.” I'm hunting for **access that no longer makes sense**. An account can look perfectly normal in the export and still have permissions it shouldn't.
-
-<br>
+<br><br>
 
 ## How I Worked Through It
 
-**1. Does the account match HR?**
-
+**1. Does the account match HR?**  
 I started with employment status, contract end dates and recent login activity. If someone has left but their account remains active, that needs investigating. The HR record could be outdated, so I can't automatically assume the access is unauthorised.
 
-**2. Is the access still appropriate?**
-
+**2. Is the access still appropriate?**  
 Finding a matching HR record doesn't mean the permissions are right. I checked access levels, administrative privileges and shared credentials against job responsibilities. I paid particular attention to admin access because the risk if it is misused hits harder.
 
-**3. What needs further investigation?**
-
+**3. What needs further investigation?**  
 Some accounts couldn't be assessed from the exports alone. For those, I needed to establish who owned the account, why the access existed and who could confirm whether it was still required. If nobody could explain who was responsible for an account, that was worth recording too.
 
-**4. What needs attention first?**
-
+**4. What needs attention first?**  
 I ranked the findings by risk, considering the privileges involved, the available information and the potential consequences. Not every discrepancy requires the same response.
-
-<br>
-<br>
+<br><br>
 
 ## What I Found
 
@@ -68,8 +60,7 @@ Almost two months later, the account still had administrative access. I prioriti
 But there's a distinction I don't want to overlook. **The records raise a serious concern, but they don't prove a breach occurred.**
 
 It's possible the contract was extended without HR being updated. That would point to a governance gap that still needs correcting, but it's different from someone accessing the system without authorisation. I need to establish what happened before deciding what action is justified.
-
-<br>
+<br><br>
 
 ## Looking Back at the Review
 
@@ -88,23 +79,19 @@ The same thinking applies to prevention. Identifying inappropriate access is one
 The question I'd carry into the next review is:
 
 **Does this access still have a legitimate purpose, and can the organisation account for it?**
+<br><br>
 
-<br>
+## Explore the Investigation
 
-
-## Supporting Documents
-
-The README follows how I approached the ticket. The supporting documents contain the source records, detailed findings, recommendations and preventive controls.
-
-| Document | Contents |
+| Document | What's Inside |
 |---|---|
-| Source Data | HR records and patient portal export |
-| Findings & Recommendations | Discrepancies, risk ratings and proposed actions |
-| Preventive Controls | Recommendations to prevent recurrence |
-| IT Manager Summary | Findings and recommended priorities |
+| [01. Source Data](01-Documents/) | Original HR records and patient portal export |
+| [02. Findings & Recommendations](01-Documents/) | Access discrepancies, risk ratings and proposed actions |
+| [03. Preventive Controls](01-Documents/) | Recommendations to prevent recurring access issues |
+| [04. IT Manager Summary](01-Documents/) | Key findings and recommended priorities |
 
 ---
 
-[Explore all IAM case studies](https://github.com/itsanitarose/IAM-Case-Studies)
+[← All Case Studies](https://github.com/itsanitarose/IAM-Case-Studies)
 
-*Northwind Health is fictional. This case study is an analytical assessment; no live production systems were changed.*
+*Northwind Health is fictional. This is a portfolio assessment; no live production systems were changed.*
