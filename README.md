@@ -8,6 +8,8 @@ It's my first week on the security team, and my first ticket arrives. The IT Man
 
 *Northwind Health is a fictional healthcare organisation supporting approximately 400 clinics and handling sensitive patient information.*
 
+<br>
+
 **Audit date:** 5 October 2026
 
 Before deciding what needs fixing, I need to understand what the records are telling me.
@@ -17,6 +19,8 @@ Before deciding what needs fixing, I need to understand what the records are tel
 I have two lists: the HR records showing who works for the organisation, and an export showing who can access the patient portal. Every account should have a legitimate owner and a reason for its level of access. That includes contractors, whose access may have an expiry date.
 
 I'm not hunting for “bad accounts.” I'm hunting for **access that no longer makes sense**. An account can look perfectly normal in the export and still have permissions it shouldn't.
+
+<br>
 
 ## How I Worked Through It
 
@@ -36,6 +40,9 @@ Some accounts couldn't be assessed from the exports alone. For those, I needed t
 
 I ranked the findings by risk, considering the privileges involved, the available information and the potential consequences. Not every discrepancy requires the same response.
 
+<br>
+<br>
+
 ## What I Found
 
 The review covered seven accounts.
@@ -48,6 +55,8 @@ The review covered seven accounts.
 | 🟢 Low | 1 | Engineering admin access requiring justification |
 | **Total** | **7** | |
 
+<br>
+
 ## Why `treyes` Goes First
 
 Two accounts were rated Critical, so I needed to decide which required attention first. The contractor's recorded end date was **31 July 2026**, but the portal export showed an admin login on **28 September 2026**.
@@ -59,6 +68,8 @@ Almost two months later, the account still had administrative access. I prioriti
 But there's a distinction I don't want to overlook. **The records raise a serious concern, but they don't prove a breach occurred.**
 
 It's possible the contract was extended without HR being updated. That would point to a governance gap that still needs correcting, but it's different from someone accessing the system without authorisation. I need to establish what happened before deciding what action is justified.
+
+<br>
 
 ## Looking Back at the Review
 
@@ -77,6 +88,9 @@ The same thinking applies to prevention. Identifying inappropriate access is one
 The question I'd carry into the next review is:
 
 **Does this access still have a legitimate purpose, and can the organisation account for it?**
+
+<br>
+
 
 ## Supporting Documents
 
