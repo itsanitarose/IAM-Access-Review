@@ -2,9 +2,7 @@
 
 ## 🎫 The Ticket
 
-It's my first week on the security team, and my first ticket arrives.
-
-The IT Manager writes:
+It's my first week on the security team, and my first ticket arrives. The IT Manager writes:
 
 > We've never properly reconciled the patient admin portal against HR. Here are both exports. Tell me what's wrong, what to fix first, and how we stop it happening again.
 
@@ -16,41 +14,27 @@ Before deciding what needs fixing, I need to understand what the records are tel
 
 ## What I'm Working With
 
-I have two lists: the HR records showing who works for the organisation, and an export showing who can access the patient portal.
+I have two lists: the HR records showing who works for the organisation, and an export showing who can access the patient portal. Every account should have a legitimate owner and a reason for its level of access. That includes contractors, whose access may have an expiry date.
 
-Every account should have a legitimate owner and a reason for its level of access. That includes contractors, whose access may have an expiry date.
-
-I'm not hunting for “bad accounts.” I'm hunting for **access that no longer makes sense**.
-
-An account can look perfectly normal in the export and still have permissions it shouldn't.
+I'm not hunting for “bad accounts.” I'm hunting for **access that no longer makes sense**. An account can look perfectly normal in the export and still have permissions it shouldn't.
 
 ## How I Worked Through It
 
 **1. Does the account match HR?**
 
-I started with employment status, contract end dates and recent login activity.
-
-If someone has left but their account remains active, that needs investigating. The HR record could be outdated, so I can't automatically assume the access is unauthorised.
+I started with employment status, contract end dates and recent login activity. If someone has left but their account remains active, that needs investigating. The HR record could be outdated, so I can't automatically assume the access is unauthorised.
 
 **2. Is the access still appropriate?**
 
-Finding a matching HR record doesn't mean the permissions are right.
-
-I checked access levels, administrative privileges and shared credentials against job responsibilities. I paid particular attention to admin access because the risk if it is misused hits harder.
+Finding a matching HR record doesn't mean the permissions are right. I checked access levels, administrative privileges and shared credentials against job responsibilities. I paid particular attention to admin access because the risk if it is misused hits harder.
 
 **3. What needs further investigation?**
 
-Some accounts couldn't be assessed from the exports alone.
-
-For those, I needed to establish who owned the account, why the access existed and who could confirm whether it was still required.
-
-If nobody could explain who was responsible for an account, that was worth recording too.
+Some accounts couldn't be assessed from the exports alone. For those, I needed to establish who owned the account, why the access existed and who could confirm whether it was still required. If nobody could explain who was responsible for an account, that was worth recording too.
 
 **4. What needs attention first?**
 
-I ranked the findings by risk, considering the privileges involved, the available information and the potential consequences.
-
-Not every discrepancy requires the same response.
+I ranked the findings by risk, considering the privileges involved, the available information and the potential consequences. Not every discrepancy requires the same response.
 
 ## What I Found
 
@@ -62,27 +46,19 @@ The review covered seven accounts.
 | 🟠 High | 2 | Orphaned admin account and shared credentials |
 | 🟡 Medium | 2 | Extended leave and Finance access requiring review |
 | 🟢 Low | 1 | Engineering admin access requiring justification |
-| **Total** | **7** |  |
+| **Total** | **7** | |
 
 ## Why `treyes` Goes First
 
-Two accounts were rated Critical, so I needed to decide which required attention first.
+Two accounts were rated Critical, so I needed to decide which required attention first. The contractor's recorded end date was **31 July 2026**, but the portal export showed an admin login on **28 September 2026**.
 
-The contractor's recorded end date was **31 July 2026**. The portal export showed an admin login on **28 September 2026**.
-
-Almost two months later, the account still had administrative access.
-
-I prioritised `treyes` because those privileges increased the potential impact of misuse.
+Almost two months later, the account still had administrative access. I prioritised `treyes` because those privileges increased the potential impact of misuse.
 
 **My recommendation:** Confirm whether the contract was extended and continued access was approved. If there's no valid authorisation, disable the account and investigate the login activity.
 
-But there's a distinction I don't want to overlook.
+But there's a distinction I don't want to overlook. **The records raise a serious concern, but they don't prove a breach occurred.**
 
-The records raise a serious concern, but they don't prove a breach occurred.
-
-It's possible the contract was extended without HR being updated. That would point to a governance gap that still needs correcting, but it's different from someone accessing the system without authorisation.
-
-I need to establish what happened before deciding what action is justified.
+It's possible the contract was extended without HR being updated. That would point to a governance gap that still needs correcting, but it's different from someone accessing the system without authorisation. I need to establish what happened before deciding what action is justified.
 
 ## Looking Back at the Review
 
@@ -90,9 +66,7 @@ With the investigation complete, I wanted to look at how I'd approached the tick
 
 Starting with the HR reconciliation was the right call. It helped me identify discrepancies before deciding what needed attention. Prioritising by risk also made sense, particularly where administrative privileges were involved.
 
-But the exports had their limits.
-
-Take `treyes`. The contract end date and later admin login raised a concern, but they couldn't tell me whether an extension had been approved. That required confirmation outside the data I'd been given.
+But the exports had their limits. Take `treyes`. The contract end date and later admin login raised a concern, but they couldn't tell me whether an extension had been approved. That required confirmation outside the data I'd been given.
 
 I'd want a clearer way to establish account ownership, check approval history and understand why access was originally granted. That would make future reviews more efficient and reduce the risk of acting on incomplete information.
 
