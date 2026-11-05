@@ -1,50 +1,60 @@
 # IAM: The Access Review
 
-## The Scenario
+## 🎫 The Ticket
 
-Northwind Health is a fictional healthcare organisation supporting approximately 400 clinics and handling sensitive patient information (ePHI).
+It's my first week on the security team, and my first ticket arrives.
 
-It's my first week on the security team, and I've been handed my first ticket.
+The IT Manager writes:
 
-<sub><em>* Fictional scenario. Real world analysis.</em></sub>
-<br><br>
+> We've never properly reconciled the patient admin portal against HR. Here are both exports. Tell me what's wrong, what to fix first, and how we stop it happening again.
 
-### 📁 The Ticket
+*Northwind Health is a fictional healthcare organisation supporting approximately 400 clinics and handling sensitive patient information.*
 
-**IT Manager's Request:**
+**Audit date:** 5 October 2026
 
-> "We've never properly reconciled the patient admin portal against HR. Here are both exports. Tell me what's wrong, what to fix first, and how we stop it happening again."
+Before deciding what needs fixing, I need to understand what the records are telling me.
 
-*Audit date: 5 October 2026*
+## What I'm Working With
 
-**[View Source Materials](./01-Documents/)**
+I have two lists: the HR records showing who works for the organisation, and an export showing who can access the patient portal.
 
----
+Every account should have a legitimate owner and a reason for its level of access. That includes contractors, whose access may have an expiry date.
 
-## My Approach
+I'm not hunting for “bad accounts.” I'm hunting for **access that no longer makes sense**.
 
-I reviewed seven patient administration portal accounts against HR records, looking for access that no longer made sense.
+An account can look perfectly normal in the export and still have permissions it shouldn't.
 
-**I worked through four questions:**
+## How I Worked Through It
 
-**01. Does the account match HR records?**  
-I checked employment status, contract end dates and recent activity.
+**1. Does the account match HR?**
 
-**02. Is the access still appropriate?**  
-I reviewed permissions, Admin access and shared credentials against job responsibilities.
+I started with employment status, contract end dates and recent login activity.
 
-**03. What needs further investigation?**  
-I checked who owned each account, why it was needed and who could confirm its access.
+If someone has left but their account remains active, that needs investigating. The HR record could be outdated, so I can't automatically assume the access is unauthorised.
 
-**04. What needs attention first?**  
-I prioritised findings based on risk, recommended actions and considered how to prevent the same issues from happening again.
+**2. Is the access still appropriate?**
 
+Finding a matching HR record doesn't mean the permissions are right.
 
+I checked access levels, administrative privileges and shared credentials against job responsibilities. I paid particular attention to admin access because the risk if it is misused hits harder.
 
+**3. What needs further investigation?**
 
----
+Some accounts couldn't be assessed from the exports alone.
 
-## Key Findings
+For those, I needed to establish who owned the account, why the access existed and who could confirm whether it was still required.
+
+If nobody could explain who was responsible for an account, that was worth recording too.
+
+**4. What needs attention first?**
+
+I ranked the findings by risk, considering the privileges involved, the available information and the potential consequences.
+
+Not every discrepancy requires the same response.
+
+## What I Found
+
+The review covered seven accounts.
 
 | Severity | Accounts | Finding |
 |---|---:|---|
@@ -52,53 +62,61 @@ I prioritised findings based on risk, recommended actions and considered how to 
 | 🟠 High | 2 | Orphaned admin account and shared credentials |
 | 🟡 Medium | 2 | Extended leave and Finance access requiring review |
 | 🟢 Low | 1 | Engineering admin access requiring justification |
-| **Total** | **7** | |
+| **Total** | **7** |  |
 
-### Top Priority: `treyes`
+## Why `treyes` Goes First
 
-The contractor's recorded end date was 31 July 2026, but an admin login occurred on 28 September 2026.
+Two accounts were rated Critical, so I needed to decide which required attention first.
 
-I put this account first because it had admin access, so misuse could cause more damage.
+The contractor's recorded end date was **31 July 2026**. The portal export showed an admin login on **28 September 2026**.
 
-**My recommendation:** Confirm whether the contract was extended. If no valid approval exists, disable the account and investigate the activity.
+Almost two months later, the account still had administrative access.
 
-The records raise a serious concern, but they do not establish that a breach occurred.
+I prioritised `treyes` because those privileges increased the potential impact of misuse.
 
----
+**My recommendation:** Confirm whether the contract was extended and continued access was approved. If there's no valid authorisation, disable the account and investigate the login activity.
 
-## Lab Outcome
+But there's a distinction I don't want to overlook.
 
-The access review is complete. I implemented and tested selected changes in Microsoft Entra ID.
+The records raise a serious concern, but they don't prove a breach occurred.
 
-**[View Lab & Testing Evidence](./02-Lab/Entra%20ID/)**
+It's possible the contract was extended without HR being updated. That would point to a governance gap that still needs correcting, but it's different from someone accessing the system without authorisation.
 
----
+I need to establish what happened before deciding what action is justified.
 
-## What I Learned
+## Looking Back at the Review
 
-Coming from a different professional background, I brought my existing communication style into the first draft of my first IAM ticket. As I reworked it, I learned to express my findings using more precise security terminology, including orphaned accounts, dormant accounts, account ownership, deprovisioning and access recertification. It wasn't about changing how I communicate, but adapting my language to the field.
+With the investigation complete, I wanted to look at how I'd approached the ticket. What helped me make a sound decision, and where would I need more information next time?
 
-My thinking shifted too. At first, my approach was purely analytical, focused on spotting accounts that looked wrong. As I worked through the datasets, I started asking sharper questions. Why does this account still have access? Is it actually inappropriate? What information is missing? What could happen if I make the wrong decision?
+Starting with the HR reconciliation was the right call. It helped me identify discrepancies before deciding what needed attention. Prioritising by risk also made sense, particularly where administrative privileges were involved.
 
-As a result, I began to see IAM as more than simply granting or removing access. It's about understanding why access exists in the first place. Security decisions shouldn't be based on technical considerations alone. They also need to account for business operations, avoid unnecessary disruption and maintain security.
+But the exports had their limits.
 
----
+Take `treyes`. The contract end date and later admin login raised a concern, but they couldn't tell me whether an extension had been approved. That required confirmation outside the data I'd been given.
+
+I'd want a clearer way to establish account ownership, check approval history and understand why access was originally granted. That would make future reviews more efficient and reduce the risk of acting on incomplete information.
+
+Acting too quickly could mean disabling access that someone still legitimately needs, disrupting business operations without resolving the actual problem. Every decision needs to account for both: **maintaining security and allowing the business to operate without unnecessary disruption.**
+
+The same thinking applies to prevention. Identifying inappropriate access is one part of the job. Understanding how it remained in place is what helps me decide which controls need improving.
+
+The question I'd carry into the next review is:
+
+**Does this access still have a legitimate purpose, and can the organisation account for it?**
 
 ## Supporting Documents
 
-| Document | Details |
+The README follows how I approached the ticket. The supporting documents contain the source records, detailed findings, recommendations and preventive controls.
+
+| Document | Contents |
 |---|---|
-| [Source Data](./01-Documents/01.%20Source%20Data.md) | Original HR records and patient portal export |
-| [Findings & Recommendations](./01-Documents/02.%20Findings%20%26%20Recommendations.md) | Findings, risk ratings, priorities and corrective actions |
-| [Preventive Controls](./01-Documents/03.%20Preventive%20Controls.md) | Recommendations to prevent recurrence |
-| [IT Manager Summary](./01-Documents/04.%20Summary%20for%20the%20IT%20Manager.md) | Key findings, immediate actions and recommendations |
-| [Lab & Testing](./02-Lab/Entra%20ID/) | Entra ID changes, PowerShell scripts and test evidence |
-
-
-<br>
+| Source Data | HR records and patient portal export |
+| Findings & Recommendations | Discrepancies, risk ratings and proposed actions |
+| Preventive Controls | Recommendations to prevent recurrence |
+| IT Manager Summary | Findings and recommended priorities |
 
 ---
 
-[All Case Studies](https://github.com/itsanitarose/IAM-Case-Studies) · [Week 2: Permission Sprawl & RBAC →](https://github.com/itsanitarose/IAM-Permission-Sprawl-RBAC)
+[Explore all IAM case studies](https://github.com/itsanitarose/IAM-Case-Studies)
 
-*Northwind Health is fictional. This is a portfolio assessment; no live production systems were changed.*
+*Northwind Health is fictional. This case study is an analytical assessment; no live production systems were changed.*
