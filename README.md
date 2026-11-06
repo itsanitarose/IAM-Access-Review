@@ -78,7 +78,11 @@ For `treyes`, the contract end date and later admin login raised a concern, espe
 
 Acting too quickly can cause problems. Disabling access someone still needs can disrupt their work without fixing the real issue, so I need to understand the situation before deciding what to do.
 
+
 Reading the NIST guidance helped me slow down and understand what needed to be confirmed before recommending access removal.
+
+I also explored Microsoft's guidance on dormant and shared accounts, alongside NHS England's approach to extended leave, beyond the records provided in the challenge.
+
 
 <br>
 
