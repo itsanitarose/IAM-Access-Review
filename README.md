@@ -68,14 +68,17 @@ It's possible the contract was extended without HR being updated. That would poi
 
 <br>
 
-Looking Back at the Review
+## Looking Back at the Review
+
 Once the investigation was complete, I looked back at how I’d approached the ticket, what helped me make a sound decision and where I’d need more information next time.
 
 Starting with the HR reconciliation was the right call. It showed me where things didn’t match before I decided what needed attention, and sorting by risk kept my focus on accounts with admin access.
 
-For treyes, the contract end date and later admin login raised a concern, especially because the account had Admin access. This didn’t prove the account was compromised, but it highlighted a governance question: had the contract been extended, and was Admin access still authorised? The exports couldn’t confirm either, so more information was needed. If there was no valid authorisation, my recommendation was to disable access and investigate the activity.
+For `treyes`, the contract end date and later admin login raised a concern, especially because the account had Admin access. This didn’t prove the account was compromised, but it highlighted a **governance** question: had the contract been extended, and was Admin access still authorised? The exports couldn’t confirm either, so more information was needed. If there was no valid authorisation, my recommendation was to disable access and investigate the activity.
 
-Acting too quickly can cause problems. Disabling access someone still needs can disrupt their work without fixing the real issue, so I need to understand the situation before deciding what to do. The review is also about understanding why inappropriate access remained in place and what needs to change to prevent it happening again.
+Acting too quickly can cause problems. Disabling access someone still needs can disrupt their work without fixing the real issue, so I need to understand the situation before deciding what to do.
+
+Reading the NIST guidance helped me slow down and understand what needed to be confirmed before recommending access removal.
 
 <br>
 
