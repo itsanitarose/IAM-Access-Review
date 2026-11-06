@@ -68,19 +68,14 @@ It's possible the contract was extended without HR being updated. That would poi
 
 <br>
 
-## Looking Back at the Review
+Looking Back at the Review
+Once the investigation was complete, I looked back at how I’d approached the ticket, what helped me make a sound decision and where I’d need more information next time.
 
-With the investigation complete, I looked back at how I'd approached the ticket. What helped me make a sound decision, and where would I need more information next time?
+Starting with the HR reconciliation was the right call. It showed me where things didn’t match before I decided what needed attention, and sorting by risk kept my focus on accounts with admin access.
 
-Starting with the HR reconciliation was the right call. It surfaced discrepancies before I decided what needed attention, and prioritising by risk kept the focus on administrative privileges.
+For treyes, the contract end date and later admin login raised a concern, especially because the account had Admin access. This didn’t prove the account was compromised, but it highlighted a governance question: had the contract been extended, and was Admin access still authorised? The exports couldn’t confirm either, so more information was needed. If there was no valid authorisation, my recommendation was to disable access and investigate the activity.
 
-But the exports had their limits. Take `treyes`: the contract end date and later admin login raised a concern, but they couldn't tell me whether an extension had been approved. That needed confirmation from outside the data I'd been given. Next time I'd want a clearer way to establish account ownership, check approval history and understand why access was originally granted.
-
-Acting too quickly has a cost. Disabling access someone still legitimately needs disrupts the business without resolving the actual problem, so every decision has to balance **maintaining security and allowing the business to operate without unnecessary disruption.** The same applies to prevention: finding inappropriate access is one part of the job, and understanding how it remained in place shows which controls need improving.
-
-The question I'd carry into the next review:
-
-**Does this access still have a legitimate purpose, and can the organisation account for it?**
+Acting too quickly can cause problems. Disabling access someone still needs can disrupt their work without fixing the real issue, so I need to understand the situation before deciding what to do. The review is also about understanding why inappropriate access remained in place and what needs to change to prevent it happening again.
 
 <br>
 
