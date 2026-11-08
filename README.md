@@ -64,7 +64,9 @@ My **recommendation** was to confirm whether the contract had been extended and 
 
 But there's a point I don't want to overlook. The records raise a serious concern, but it's possible the contract was extended without HR being updated. That would point to a governance gap that needs correcting.
 
-Explore the findings and recommendations for the remaining 6 accounts here.
+
+Explore the [findings and recommendations](Documents/02.%20Findings%20%26%20Recommendations.md) for the remaining six accounts.
+
 
 <br>
 
@@ -78,7 +80,9 @@ Acting too quickly can cause problems. Disabling access someone still needs can 
 
 Reading the NIST guidance helped me anchor that restraint. It allowed me to slow down and establish what needed confirming before recommending a disruptive change.
 
-I also explored Microsoft's guidance on dormant and shared accounts, alongside NHS England's approach to extended leave, which I found particularly interesting for how large organisations dynamically handle extended leave and temporary lifecycle pauses.
+
+I also explored Microsoft's guidance on dormant and shared accounts, alongside [NHS England's approach](https://www.england.nhs.uk/long-read/smartcards-and-access-controls/#other-leavers) to extended leave, which I found particularly interesting for how large organisations dynamically handle extended leave and temporary lifecycle pauses.
+
 
 <br>
 
