@@ -1,6 +1,6 @@
 # IAM Skills Map
 
-**Northwind Health | IAM: User Access Review**
+**Northwind Health | User Access Review**
 
 This map links IAM Analist job requirements to work completed in this project.
 
